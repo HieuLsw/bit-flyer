@@ -8,10 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+@class GamePlayManager;
 
 @interface BaseGameScene : CCLayer {
-
+	GamePlayManager * m_pGamePlayMgr;
 }
 
--(void)setUpInterface;
 @end

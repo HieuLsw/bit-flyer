@@ -7,8 +7,7 @@
 //
 
 #import "BaseGameScene.h"
-#import "BaseShip.h"
-
+#import "GamePlayManager.h"
 @implementation BaseGameScene
 
 +(id) scene
@@ -45,22 +44,23 @@
 		// add the label as a child to this Layer
 		[self addChild: label];
 		
-		BaseShip * _pShip = [[BaseShip alloc]initWithSprite:[CCSprite spriteWithFile:@"shipBlue.png"]];
-		_pShip.position = CGPointMake(160,150);
-		[self addChild:_pShip];
-		[_pShip release];
+	
 		
 		
-		[self setUpInterface];
+		m_pGamePlayMgr = [[GamePlayManager alloc]init];
+		m_pGamePlayMgr.CurrentScene = self;
+		[m_pGamePlayMgr startGame];
+		[m_pGamePlayMgr resetGame];
+		
+		[self addChild:m_pGamePlayMgr];
+		
+		
+	//	[self setUpInterface];
 	}
 	return self;
 }
 
 
--(void)setUpInterface
-{
-	
-}
 
 // on "dealloc" you need to release all your retained objects
 - (void) dealloc
@@ -70,6 +70,9 @@
 	// cocos2d will automatically release all the children (Label)
 	
 	// don't forget to call "super dealloc"
+	
+	m_pGamePlayMgr.CurrentScene = nil;
+	[m_pGamePlayMgr release];
 	[super dealloc];
 }
 

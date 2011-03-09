@@ -8,17 +8,23 @@
 
 #import <Foundation/Foundation.h>
 #import "GameDefines.h"
+#import "CCTouchDelegateProtocol.h"
 
 @class InputManager;
+@class ControlOverlay;
 
-@interface GamePlayManager : CCNode{
+
+@interface GamePlayManager : CCNode<CCTargetedTouchDelegate>{
 	NSMutableArray * m_prgUpdates;
 	CCScene * m_pCurrentScene;
 	InputManager * m_pInputManager;
+	ControlOverlay * m_pControl;
+	CGPoint m_LastTouch;
 }
 @property(nonatomic,assign)CCScene * CurrentScene;
 -(id)init;
 -(void)updateGame:(ccTime)_fDelta;
 -(void)resetGame;
+-(void)startGame;
 -(void)setUpInterface;
 @end

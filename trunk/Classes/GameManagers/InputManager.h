@@ -10,7 +10,7 @@
 
 
 @interface InputManager : NSObject {
-	NSMutableArray * m_prgInputs
+	NSMutableArray * m_prgInputs;
 }
 -(void)handleTouchLeft;
 -(void)handleTouchRight;
