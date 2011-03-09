@@ -17,7 +17,6 @@
 	{
 		m_pSprite = [_pSprite retain];
 		[self addChild:_pSprite];
-		[self schedule:@selector(updateWithGameData:)];
 	}
 	
 	return self;

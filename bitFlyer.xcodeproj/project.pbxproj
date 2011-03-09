@@ -13,6 +13,11 @@
 		503E75A8131735B700D47F08 /* BaseGameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 503E75A7131735B700D47F08 /* BaseGameObject.m */; };
 		503E76191317472100D47F08 /* BaseShip.m in Sources */ = {isa = PBXBuildFile; fileRef = 503E76181317472100D47F08 /* BaseShip.m */; };
 		503E762513174A5900D47F08 /* shipBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = 503E762413174A5900D47F08 /* shipBlue.png */; };
+		503E769A1318430700D47F08 /* UI-button-Left-Arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 503E76981318430700D47F08 /* UI-button-Left-Arrow.png */; };
+		503E769B1318430700D47F08 /* UI-button-Right-Arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 503E76991318430700D47F08 /* UI-button-Right-Arrow.png */; };
+		503E76B013184E0400D47F08 /* InputManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 503E76AF13184E0400D47F08 /* InputManager.m */; };
+		503E76B313184E1300D47F08 /* GamePlayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 503E76B213184E1300D47F08 /* GamePlayManager.m */; };
+		503E771A13185C2A00D47F08 /* ControlEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 503E771913185C2A00D47F08 /* ControlEvent.m */; };
 		504DFBCE10AF12E9006D82FE /* CLScoreServerPost.h in Headers */ = {isa = PBXBuildFile; fileRef = 504DFBC810AF12E9006D82FE /* CLScoreServerPost.h */; };
 		504DFBCF10AF12E9006D82FE /* CLScoreServerPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 504DFBC910AF12E9006D82FE /* CLScoreServerPost.m */; };
 		504DFBD010AF12E9006D82FE /* CLScoreServerRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 504DFBCA10AF12E9006D82FE /* CLScoreServerRequest.h */; };
@@ -42,6 +47,9 @@
 		507ED64211C638C6002ED3FC /* CocosDenshion.m in Sources */ = {isa = PBXBuildFile; fileRef = 507ED63911C638C6002ED3FC /* CocosDenshion.m */; };
 		507ED64311C638C6002ED3FC /* SimpleAudioEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 507ED63A11C638C6002ED3FC /* SimpleAudioEngine.h */; };
 		507ED64411C638C6002ED3FC /* SimpleAudioEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 507ED63B11C638C6002ED3FC /* SimpleAudioEngine.m */; };
+		50C14840132736E50059E00C /* ControlOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C1483F132736E50059E00C /* ControlOverlay.m */; };
+		50C1486013273FDB0059E00C /* middle.png in Resources */ = {isa = PBXBuildFile; fileRef = 50C1485F13273FDB0059E00C /* middle.png */; };
+		50C14902132747800059E00C /* touch.png in Resources */ = {isa = PBXBuildFile; fileRef = 50C14901132747800059E00C /* touch.png */; };
 		50F4132A106926B2002A0D5E /* FontLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 50F41307106926B2002A0D5E /* FontLabel.h */; };
 		50F4132B106926B2002A0D5E /* FontLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F41308106926B2002A0D5E /* FontLabel.m */; };
 		50F4132C106926B2002A0D5E /* FontLabelStringDrawing.h in Headers */ = {isa = PBXBuildFile; fileRef = 50F41309106926B2002A0D5E /* FontLabelStringDrawing.h */; };
@@ -276,6 +284,14 @@
 		503E76171317472100D47F08 /* BaseShip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseShip.h; sourceTree = "<group>"; };
 		503E76181317472100D47F08 /* BaseShip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseShip.m; sourceTree = "<group>"; };
 		503E762413174A5900D47F08 /* shipBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shipBlue.png; path = Sprites/shipBlue.png; sourceTree = "<group>"; };
+		503E76981318430700D47F08 /* UI-button-Left-Arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UI-button-Left-Arrow.png"; sourceTree = "<group>"; };
+		503E76991318430700D47F08 /* UI-button-Right-Arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UI-button-Right-Arrow.png"; sourceTree = "<group>"; };
+		503E76AE13184E0400D47F08 /* InputManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputManager.h; sourceTree = "<group>"; };
+		503E76AF13184E0400D47F08 /* InputManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputManager.m; sourceTree = "<group>"; };
+		503E76B113184E1300D47F08 /* GamePlayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GamePlayManager.h; sourceTree = "<group>"; };
+		503E76B213184E1300D47F08 /* GamePlayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GamePlayManager.m; sourceTree = "<group>"; };
+		503E771813185C2A00D47F08 /* ControlEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlEvent.h; sourceTree = "<group>"; };
+		503E771913185C2A00D47F08 /* ControlEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControlEvent.m; sourceTree = "<group>"; };
 		504DFBC810AF12E9006D82FE /* CLScoreServerPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLScoreServerPost.h; sourceTree = "<group>"; };
 		504DFBC910AF12E9006D82FE /* CLScoreServerPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLScoreServerPost.m; sourceTree = "<group>"; };
 		504DFBCA10AF12E9006D82FE /* CLScoreServerRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLScoreServerRequest.h; sourceTree = "<group>"; };
@@ -301,6 +317,10 @@
 		507ED63911C638C6002ED3FC /* CocosDenshion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CocosDenshion.m; sourceTree = "<group>"; };
 		507ED63A11C638C6002ED3FC /* SimpleAudioEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleAudioEngine.h; sourceTree = "<group>"; };
 		507ED63B11C638C6002ED3FC /* SimpleAudioEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleAudioEngine.m; sourceTree = "<group>"; };
+		50C1483E132736E50059E00C /* ControlOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlOverlay.h; sourceTree = "<group>"; };
+		50C1483F132736E50059E00C /* ControlOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControlOverlay.m; sourceTree = "<group>"; };
+		50C1485F13273FDB0059E00C /* middle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = middle.png; path = Sprites/middle.png; sourceTree = "<group>"; };
+		50C14901132747800059E00C /* touch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = touch.png; path = Sprites/touch.png; sourceTree = "<group>"; };
 		50F41307106926B2002A0D5E /* FontLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontLabel.h; sourceTree = "<group>"; };
 		50F41308106926B2002A0D5E /* FontLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FontLabel.m; sourceTree = "<group>"; };
 		50F41309106926B2002A0D5E /* FontLabelStringDrawing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontLabelStringDrawing.h; sourceTree = "<group>"; };
@@ -600,6 +620,8 @@
 		2D500B1D0D5A766B00DBA0E3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				503E76AD13184DD600D47F08 /* GameManagers */,
+				503E76A4131845CB00D47F08 /* UIItems */,
 				503E75AA131735D400D47F08 /* Defines */,
 				503E75A51317357B00D47F08 /* GameObjects */,
 				503E7578131733EA00D47F08 /* Scenes */,
@@ -629,6 +651,8 @@
 				503E75A7131735B700D47F08 /* BaseGameObject.m */,
 				503E76171317472100D47F08 /* BaseShip.h */,
 				503E76181317472100D47F08 /* BaseShip.m */,
+				50C1483E132736E50059E00C /* ControlOverlay.h */,
+				50C1483F132736E50059E00C /* ControlOverlay.m */,
 			);
 			path = GameObjects;
 			sourceTree = "<group>";
@@ -646,9 +670,40 @@
 		503E762313174A4900D47F08 /* Sprites */ = {
 			isa = PBXGroup;
 			children = (
+				50C14901132747800059E00C /* touch.png */,
+				50C1485F13273FDB0059E00C /* middle.png */,
 				503E762413174A5900D47F08 /* shipBlue.png */,
 			);
 			name = Sprites;
+			sourceTree = "<group>";
+		};
+		503E76971318430700D47F08 /* UserInterface */ = {
+			isa = PBXGroup;
+			children = (
+				503E76981318430700D47F08 /* UI-button-Left-Arrow.png */,
+				503E76991318430700D47F08 /* UI-button-Right-Arrow.png */,
+			);
+			path = UserInterface;
+			sourceTree = "<group>";
+		};
+		503E76A4131845CB00D47F08 /* UIItems */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIItems;
+			sourceTree = "<group>";
+		};
+		503E76AD13184DD600D47F08 /* GameManagers */ = {
+			isa = PBXGroup;
+			children = (
+				503E76AE13184E0400D47F08 /* InputManager.h */,
+				503E76AF13184E0400D47F08 /* InputManager.m */,
+				503E76B113184E1300D47F08 /* GamePlayManager.h */,
+				503E76B213184E1300D47F08 /* GamePlayManager.m */,
+				503E771813185C2A00D47F08 /* ControlEvent.h */,
+				503E771913185C2A00D47F08 /* ControlEvent.m */,
+			);
+			path = GameManagers;
 			sourceTree = "<group>";
 		};
 		504DFBC710AF12E9006D82FE /* cocoslive */ = {
@@ -756,6 +811,7 @@
 		50F414EB1069373D002A0D5E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				503E76971318430700D47F08 /* UserInterface */,
 				503E762313174A4900D47F08 /* Sprites */,
 				E02BB762126CC1E0006E46A2 /* iTunesArtwork */,
 				E02BB4FE126CA50F006E46A2 /* Icon@2x.png */,
@@ -1176,6 +1232,10 @@
 				E02BB508126CA50F006E46A2 /* Icon-72.png in Resources */,
 				E02BB763126CC1E0006E46A2 /* iTunesArtwork in Resources */,
 				503E762513174A5900D47F08 /* shipBlue.png in Resources */,
+				503E769A1318430700D47F08 /* UI-button-Left-Arrow.png in Resources */,
+				503E769B1318430700D47F08 /* UI-button-Right-Arrow.png in Resources */,
+				50C1486013273FDB0059E00C /* middle.png in Resources */,
+				50C14902132747800059E00C /* touch.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1193,6 +1253,10 @@
 				503E757B1317341900D47F08 /* BaseGameScene.m in Sources */,
 				503E75A8131735B700D47F08 /* BaseGameObject.m in Sources */,
 				503E76191317472100D47F08 /* BaseShip.m in Sources */,
+				503E76B013184E0400D47F08 /* InputManager.m in Sources */,
+				503E76B313184E1300D47F08 /* GamePlayManager.m in Sources */,
+				503E771A13185C2A00D47F08 /* ControlEvent.m in Sources */,
+				50C14840132736E50059E00C /* ControlOverlay.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

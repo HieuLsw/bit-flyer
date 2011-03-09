@@ -7,19 +7,19 @@
 //
 
 #import "InputManager.h"
-
+#import "ControlEvent.h"
 
 @implementation InputManager
 
 
 -(void)handleTouchLeft
 {
-	
+	[m_prgInputs addObject:[ControlEvent ControlEventWithId:EVENT_PUSH_LEFT]];
 }
 
 -(void)handleTouchRight
 {
-	
+	[m_prgInputs addObject:[ControlEvent ControlEventWithId:EVENT_PUSH_RIGHT]];
 }
 
 

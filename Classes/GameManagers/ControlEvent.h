@@ -11,12 +11,16 @@
 typedef enum {
 	EVENT_PUSH_LEFT,
 	EVENT_PUSH_RIGHT
-}TOUCH_EVENT;
+}CONTROL_EVENT;
 
-@interface ControlEvent : NSObject {
-	TOUCH_EVENT m_uEventId;
+@interface ControlEvent : NSObject 
+{
+	CONTROL_EVENT m_uEventId;
 	
 }
-@property(nonatomic,readonly)TOUCH_EVENT EventId;
+-(id)initWithEventId:(CONTROL_EVENT)_uTouchId;
++(id)ControlEventWithId:(CONTROL_EVENT)_uTouchId;
+
+@property(nonatomic,readonly)CONTROL_EVENT EventId;
 
 @end
