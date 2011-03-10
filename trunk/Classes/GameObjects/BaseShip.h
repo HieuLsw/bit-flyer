@@ -11,6 +11,8 @@
 
 @interface BaseShip : BaseGameObject {
 
+	CGPoint m_Destination;
 }
 
+@property (nonatomic,assign) CGPoint Destination;
 @end
