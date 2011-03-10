@@ -12,7 +12,7 @@
 
 @class InputManager;
 @class ControlOverlay;
-
+@class BaseShip;
 
 @interface GamePlayManager : CCNode<CCTargetedTouchDelegate>{
 	NSMutableArray * m_prgUpdates;
@@ -20,6 +20,8 @@
 	InputManager * m_pInputManager;
 	ControlOverlay * m_pControl;
 	CGPoint m_LastTouch;
+	BaseShip * m_pShip;
+	BOOL m_bPlayerTouching;
 }
 @property(nonatomic,assign)CCScene * CurrentScene;
 -(id)init;

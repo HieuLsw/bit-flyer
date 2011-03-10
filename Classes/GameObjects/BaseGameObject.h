@@ -13,6 +13,7 @@
 
 @interface BaseGameObject : CCNode 
 {
+@protected
 	CCSprite * m_pSprite;
 }
 

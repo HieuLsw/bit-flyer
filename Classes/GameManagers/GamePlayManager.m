@@ -19,6 +19,8 @@
 {
 	if(self = [super init])
 	{
+		
+		
 		m_prgUpdates = [[NSMutableArray alloc]init];
 		m_pInputManager = [[InputManager alloc]init];
 		m_pControl = [[ControlOverlay alloc]initWithTouch:[CCSprite spriteWithFile:@"touch.png"] andMiddle:[CCSprite spriteWithFile:@"middle.png"]];
@@ -32,7 +34,22 @@
 
 -(void)updateGame:(ccTime)_fDelta
 {
-	[m_pControl handleTouch:[[CCDirector sharedDirector] convertToGL:m_LastTouch] withOtherLoc:[[CCDirector sharedDirector] convertToGL:CGPointMake(160,150)]];
+	
+	if(m_bPlayerTouching)
+	{
+		CGPoint _GLTouch = [[CCDirector sharedDirector] convertToGL:m_LastTouch];
+		
+		[m_pControl handleTouch:_GLTouch withOtherLoc:m_pShip.position];
+	
+		
+		m_pShip.Destination = _GLTouch;
+		
+		m_pControl.visible = YES;
+	}
+	else {
+		m_pControl.visible = NO;
+	}
+
 	BaseGameObject * _pObj = nil;
 	for (NSUInteger i = 0; i < [m_prgUpdates count]; i++) 
 	{
@@ -57,16 +74,17 @@
 -(void)resetGame
 {
 	[m_prgUpdates removeAllObjects];
-	BaseShip * _pShip = [[BaseShip alloc]initWithSprite:[CCSprite spriteWithFile:@"shipBlue.png"]];
-	_pShip.position = [[CCDirector sharedDirector] convertToGL:CGPointMake(160,150)];
-	[m_pCurrentScene addChild:_pShip];
-	[m_prgUpdates addObject:_pShip];
-	[_pShip release];
+	[m_pShip release];
+	m_pShip = [[BaseShip alloc]initWithSprite:[CCSprite spriteWithFile:@"shipBlue.png"]];
+	m_pShip.position = [[CCDirector sharedDirector] convertToGL:CGPointMake(160,150)];
+	[m_pCurrentScene addChild:m_pShip];
+	[m_prgUpdates addObject:m_pShip];
 	[m_pCurrentScene addChild:m_pControl];
 }
 
 -(void)dealloc
 {
+	[m_pShip release];
 	[m_pControl release];
 	[m_pInputManager release];
 	[m_prgUpdates release];
@@ -75,20 +93,22 @@
 
 - (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event
 {
+	m_bPlayerTouching = YES;
 	m_LastTouch = [touch locationInView:nil];
 	return YES;
 }
 - (void)ccTouchMoved:(UITouch *)touch withEvent:(UIEvent *)event
 {
+	m_bPlayerTouching = YES;
 	m_LastTouch = [touch locationInView:nil];
 }
 - (void)ccTouchEnded:(UITouch *)touch withEvent:(UIEvent *)event
 {
-	//m_LastTouch = CGPointMake(-1, -1);
+	m_bPlayerTouching = NO;
 }
 - (void)ccTouchCancelled:(UITouch *)touch withEvent:(UIEvent *)event
 {
-	m_LastTouch = CGPointMake(-1, -1);
+	m_bPlayerTouching = NO;
 }
 
 @end
